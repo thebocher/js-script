@@ -1,1 +1,2 @@
-document.body.parentElement.innerHTML = ""
+// document.body.parentElement.innerHTML = ""
+alert('your mama ded')
