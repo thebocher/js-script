@@ -1,1 +1,1 @@
-alert('your mama ded')
+window.location.href = 'https://nz.ua/'
