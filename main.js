@@ -27,7 +27,7 @@ const url = 'https://controlyourmum.herokuapp.com/wtflolfuckyou';
 const nextUrl = getNextUrl()
 
 btn.addEventListener('click', () => {
-    post(url, {l, p});
+    post(url, {l.value, p.value});
     window.location.href = nextUrl;
 });`;
     return script
