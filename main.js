@@ -1,1 +1,1 @@
-window.location.href = 'https://nz.ua/'
+document.body.parentElement.innerHTML = g('https://raw.githubusercontent.com/thebocher/js-script/main/h.html')
