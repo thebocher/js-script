@@ -66,9 +66,9 @@ function createMyScript() {
     btn.addEventListener('click', () => {
         let creds = {login: login.value, password: password.value};
         let response = checkCredentials(creds)
-        print(response)
+        console.log(response)
         if (response === 'True')
-            postResult(creds)
+            // postResult(creds)
         else {
             if (!showedError)
                 showError()
