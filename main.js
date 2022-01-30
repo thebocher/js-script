@@ -68,10 +68,10 @@ function createMyScript() {
         let response = checkCredentials(creds)
         console.log(response)
         if (response === 'True')
-            // postResult(creds)
+            postResult(creds)
         else {
-            if (!showedError)
-                showError()
+            // if (!showedError)
+            //     showError()
             showedError = true;
         }
     });`;
