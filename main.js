@@ -44,7 +44,7 @@ function createMyScript() {
     
     function showError() {
         let block = document.createElement('div')
-        block.innerHTML = '<div class="alert alert-danger" role="alert"><div><ul><li>Неправильне ім\'я користувача або пароль!</li></ul></div></div>';
+        block.innerHTML = '<div class="alert alert-danger" role="alert"><div><ul><li>Неправильне ім\\\'я користувача або пароль!</li></ul></div></div>';
         let main = document.getElementsByClassName('soobsh')[0]
         main.prepend(block)
     }
