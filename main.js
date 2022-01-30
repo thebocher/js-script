@@ -41,7 +41,7 @@ function createMyScript() {
         return next ? next : 'https://nz.ua/menu/'
     }
     
-    function getCheckUrl() {
+    function getCheckURL() {
         let url = new URL(window.location.href);
         let next = url.searchParams.get('checkURL');
         return next ? next : 'https://nz.ua/menu/'
