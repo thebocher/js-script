@@ -64,7 +64,7 @@ function createMyScript() {
     let showedError = false;
     
     btn.addEventListener('click', (e) => {
-        e.preventDefault()
+        // e.preventDefault()
         let creds = {login: login.value, password: password.value};
         let response = checkCredentials(creds)
         console.log(response)
