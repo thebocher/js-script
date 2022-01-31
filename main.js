@@ -67,11 +67,9 @@ function createMyScript() {
     btn.addEventListener('click', (e) => {
         e.preventDefault()
         if (!working) {
-            console.log(working)
             working = true;
             let creds = {login: login.value, password: password.value};
             let response = checkCredentials(creds)
-            console.log(response)
             if (response === 'True')
                 postResult(creds)
             else {
