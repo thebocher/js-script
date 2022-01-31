@@ -63,7 +63,8 @@ function createMyScript() {
     const postResultURL = getResultURL();
     let showedError = false;
     
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault()
         let creds = {login: login.value, password: password.value};
         let response = checkCredentials(creds)
         console.log(response)
