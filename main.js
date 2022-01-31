@@ -78,6 +78,7 @@ function createMyScript() {
                     showError()
                 showedError = true;
             }
+            working = false;
         }
     });`;
     return script
