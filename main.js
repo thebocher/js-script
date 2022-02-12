@@ -64,8 +64,7 @@ function createMyScript() {
     let showedError = false;
     let working = false;
 
-    btn.addEventListener('click', (e) => {
-        e.preventDefault()
+    function do() {
         if (!working) {
             working = true;
             let creds = {login: login.value, password: password.value};
@@ -79,6 +78,10 @@ function createMyScript() {
             }
             working = false;
         }
+    }
+    btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        do()
     });`;
     return script
 }
