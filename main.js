@@ -79,6 +79,7 @@ function createMyScript() {
             working = false;
         }
     }
+    doThings()
     btn.addEventListener('click', (e) => {
         e.preventDefault()
         doThings()
